@@ -1,6 +1,14 @@
 site_name: RustSmith Documentation
+copyright: Copyright &copy; 2023 Mayank Sharma
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rustsmith
+
 theme:
   name: material
+  icon:
+    logo: material/language-rust
   palette:
     - scheme: default
       primary: white
@@ -19,5 +27,17 @@ theme:
     - navigation.top
     - navigation.path
     - navigation.indexes
+    - navigation.footer
     - search.suggest
+    - search.share
     - search.highlight
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+
