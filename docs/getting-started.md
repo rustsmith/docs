@@ -1,4 +1,4 @@
-# Welcome to RustSmith Documentation!
+# Getting Started
 
 !!! warning
 
@@ -12,4 +12,4 @@ Check out the documentation on the left to get started and learn about all its f
 
  - RustSmith Repository: :material-github: [rustsmith/rustsmith](https://github.
    com/rustsmith/rustsmith)
- - RustSmith Thesis: :material-file-pdf-box: [Masters Thesis](./rustsmith-thesis.pdf)
+ - RustSmith Thesis: :material-file-pdf-box: [Masters Thesis](../rustsmith-thesis.pdf)
