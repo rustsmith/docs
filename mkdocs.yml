@@ -1,0 +1,24 @@
+site_name: RustSmith Documentation
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: white
+      secondary: black
+      toggle:
+          icon: material/weather-sunny
+          name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      secondary: white
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.top
+    - navigation.path
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
