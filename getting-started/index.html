@@ -239,9 +239,81 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Getting Started
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-executable" class="md-nav__link">
+    Getting the executable
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting the executable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-method" class="md-nav__link">
+    Recommended Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-rustsmith-using-the-jar-file" class="md-nav__link">
+    Running RustSmith using the JAR File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-from-source" class="md-nav__link">
+    Building from Source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    Basic Usage
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -312,6 +384,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-executable" class="md-nav__link">
+    Getting the executable
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting the executable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-method" class="md-nav__link">
+    Recommended Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-rustsmith-using-the-jar-file" class="md-nav__link">
+    Running RustSmith using the JAR File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-from-source" class="md-nav__link">
+    Building from Source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    Basic Usage
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -330,14 +458,127 @@
 <p class="admonition-title">Warning</p>
 <p>Documentation is still a work-in-progress!</p>
 </div>
-<p>RustSmith is a randomized program fuzzer for the Rust programming language that will generate valid programs that 
-exercise multiple parts of the Rust programming language, in an attempt to uncover bugs in Rust compilers.</p>
-<p>Check out the documentation on the left to get started and learn about all its features!</p>
-<ul>
-<li>RustSmith Repository: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg></span> <a href="https://github.
-   com/rustsmith/rustsmith">rustsmith/rustsmith</a></li>
-<li>RustSmith Thesis: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5v1m5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5v3m4-3H17v1h1.5V13H17v2h-1.5V9h3v1.5m-6.5 0h1v3h-1v-3m-5 0h1v1H7v-1Z"/></svg></span> <a href="../rustsmith-thesis.pdf">Masters Thesis</a></li>
-</ul>
+<p>RustSmith at it's core is simply an executable that will run and generate programs based on command-line arguments passed in. Follow the steps below to start the generation of programs!</p>
+<h2 id="getting-the-executable">Getting the executable</h2>
+<h3 id="recommended-method">Recommended Method</h3>
+<p>To download and install RustSmith, the recommended method is to simply download the "RustSmith
+Executable" from the latest release from the "Releases" panel on the right.</p>
+<p>RustSmith can then be invoked as below:</p>
+<div class="highlight"><pre><span></span><code>./rustsmith<span class="w"> </span>--help
+</code></pre></div>
+<h3 id="docker">Docker</h3>
+<p>Docker can also be used in the following way using the latest docker image:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>ghcr.io/rustsmith/rustsmith<span class="w"> </span>--help
+</code></pre></div>
+<h3 id="running-rustsmith-using-the-jar-file">Running RustSmith using the JAR File</h3>
+<p>Alternatively, the JAR file in the releases can be downloaded and used instead. RustSmith would then
+be invoked as:</p>
+<div class="highlight"><pre><span></span><code>java<span class="w"> </span>-jar<span class="w"> </span>RustSmith-1.0-SNAPSHOT-all.jar
+</code></pre></div>
+<h3 id="building-from-source">Building from Source</h3>
+<p>To build RustSmith from source, an installation of Java 15 is required. More information for
+installing OpenJDK 15 can be found on the <a href="https://openjdk.java.net">OpenJDK Website</a>.</p>
+<p>Building and executing RustSmith can then be done as follows:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:rustsmith/rustsmith.git
+<span class="nb">cd</span><span class="w"> </span>rustsmith
+./gradlew<span class="w"> </span>build
+</code></pre></div>
+<p>This will create both the standalone executable under <code>./run/rustsmith</code> and the packaged JAR file
+under <code>./build/libs/RustSmith-1.0-SNAPSHOT-all.jar</code> which can then be executed as described above.</p>
+<h2 id="basic-usage">Basic Usage</h2>
+<p>RustSmith is just a command line tool that can generate you valid Rust programs randomly.</p>
+<p>The most basic usage of rustsmith would be the following command:</p>
+<div class="highlight"><pre><span></span><code>./rustsmith<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+<p>Which, when ran, should set up a folder structure wherever you ran the program in the following way:</p>
+<div class="highlight"><pre><span></span><code>./outRust
+<span class="p">|</span>--<span class="w"> </span>file0
+<span class="p">|</span><span class="w">   </span><span class="p">|</span>--<span class="w"> </span>file0.rs
+<span class="p">|</span><span class="w">   </span><span class="p">|</span>--<span class="w"> </span>file0.txt
+</code></pre></div>
+<p><code>file0.rs</code> will look something like the following:</p>
+<details class="note"><summary>Generated Rust Program snippet</summary><div class="highlight"><pre><span></span><code><span class="cp">#![allow(warnings, unused, unconditional_panic)]</span>
+<span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">env</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">collections</span>::<span class="n">hash_map</span>::<span class="n">DefaultHasher</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">hash</span>::<span class="p">{</span><span class="n">Hash</span><span class="p">,</span><span class="w"> </span><span class="n">Hasher</span><span class="p">};</span>
+<span class="k">const</span><span class="w"> </span><span class="n">CONST1</span>: <span class="kt">f32</span> <span class="o">=</span><span class="w"> </span><span class="mf">0.2419321</span><span class="k">f32</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">CONST2</span>: <span class="kt">i128</span> <span class="o">=</span><span class="w"> </span><span class="mi">131415789711622847644195956159839136052</span><span class="kt">i128</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">CONST3</span>: <span class="kt">u8</span> <span class="o">=</span><span class="w"> </span><span class="mi">173</span><span class="k">u8</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">CONST4</span>: <span class="kt">f32</span> <span class="o">=</span><span class="w"> </span><span class="mf">0.32691818</span><span class="k">f32</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">CONST5</span>: <span class="kt">bool</span> <span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">CONST6</span>: <span class="kt">u32</span> <span class="o">=</span><span class="w"> </span><span class="mi">2727919348</span><span class="k">u32</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">CONST7</span>: <span class="kt">u32</span> <span class="o">=</span><span class="w"> </span><span class="mi">1813123347</span><span class="k">u32</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">CONST8</span>: <span class="kt">i128</span> <span class="o">=</span><span class="w"> </span><span class="mi">53614034395947885105180317431878184857</span><span class="kt">i128</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">CONST9</span>: <span class="kt">f32</span> <span class="o">=</span><span class="w"> </span><span class="mf">0.41204387</span><span class="k">f32</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">CONST10</span>: <span class="kt">u16</span> <span class="o">=</span><span class="w"> </span><span class="mi">887</span><span class="k">u16</span><span class="p">;</span>
+<span class="fm">macro_rules!</span><span class="w"> </span><span class="n">reconditioned_mod</span><span class="p">{</span>
+<span class="w">    </span><span class="p">(</span><span class="cp">$a</span>:<span class="nc">expr</span><span class="p">,</span><span class="cp">$b</span>:<span class="nc">expr</span><span class="p">,</span><span class="w"> </span><span class="cp">$zero</span>: <span class="nc">expr</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">denominator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cp">$b</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">denominator</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="cp">$zero</span><span class="p">)</span><span class="w"> </span><span class="p">{(</span><span class="cp">$a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">denominator</span><span class="p">)}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="cp">$zero</span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="fm">macro_rules!</span><span class="w"> </span><span class="n">reconditioned_div</span><span class="p">{</span>
+<span class="w">    </span><span class="p">(</span><span class="cp">$a</span>:<span class="nc">expr</span><span class="p">,</span><span class="cp">$b</span>:<span class="nc">expr</span><span class="p">,</span><span class="w"> </span><span class="cp">$zero</span>: <span class="nc">expr</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">denominator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cp">$b</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">denominator</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="cp">$zero</span><span class="p">)</span><span class="w"> </span><span class="p">{(</span><span class="cp">$a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">denominator</span><span class="p">)}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="cp">$zero</span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="fm">macro_rules!</span><span class="w"> </span><span class="n">reconditioned_access</span><span class="p">{</span>
+<span class="w">    </span><span class="p">(</span><span class="cp">$a</span>:<span class="nc">expr</span><span class="p">,</span><span class="cp">$b</span>:<span class="nc">expr</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{{</span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="n">arrLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cp">$a</span><span class="p">.</span><span class="n">len</span><span class="p">();</span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cp">$b</span><span class="p">;</span>
+<span class="w">        </span><span class="cp">$a</span><span class="p">[</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arrLength</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">}]</span>
+<span class="w">    </span><span class="p">}};</span>
+<span class="p">}</span>
+<span class="cp">#[derive(Debug)]</span>
+<span class="k">struct</span> <span class="nc">Struct2</span><span class="w"> </span><span class="p">{</span>
+<span class="n">var6</span>: <span class="nb">Option</span><span class="o">&lt;</span><span class="kt">u32</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="n">var7</span>: <span class="kt">f32</span><span class="p">,</span>
+<span class="n">var8</span>: <span class="kt">i32</span><span class="p">,</span>
+<span class="n">var9</span>: <span class="kt">u8</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">impl</span><span class="w"> </span><span class="n">Struct2</span><span class="w"> </span><span class="p">{</span>
+<span class="cp">#[inline(never)]</span>
+<span class="k">fn</span> <span class="nf">fun7</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">var41</span>: <span class="kt">f64</span><span class="p">,</span><span class="w"> </span><span class="n">var42</span>: <span class="nb">Option</span><span class="o">&lt;</span><span class="kt">u16</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">var43</span>: <span class="kt">i128</span><span class="p">,</span><span class="w"> </span><span class="n">var44</span>: <span class="nb">Option</span><span class="o">&lt;</span><span class="n">Struct2</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">hasher</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">DefaultHasher</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">Struct3</span><span class="w"> </span><span class="p">{</span>
+<span class="mi">44</span><span class="k">i8</span><span class="p">;</span>
+<span class="p">();</span>
+<span class="mi">138654581908947122899287364284989451186</span><span class="kt">i128</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">var45</span>: <span class="kt">u16</span> <span class="o">=</span><span class="w"> </span><span class="mi">34348</span><span class="k">u16</span><span class="p">;</span>
+<span class="n">Struct2</span><span class="w"> </span><span class="p">{</span><span class="n">var6</span>: <span class="nb">None</span>::<span class="o">&lt;</span><span class="kt">u32</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">var7</span>: <span class="mf">0.7830445</span><span class="k">f32</span><span class="p">,</span><span class="w"> </span><span class="n">var8</span>: <span class="mi">899283879</span><span class="k">i32</span><span class="p">,</span><span class="w"> </span><span class="n">var9</span>: <span class="mi">227</span><span class="k">u8</span><span class="p">,};</span>
+<span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">var46</span>: <span class="kt">i128</span> <span class="o">=</span><span class="w"> </span><span class="mi">74743375548520924870409283084422405671</span><span class="kt">i128</span><span class="p">;</span>
+<span class="n">var46</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">28713462321172602643073431590454312989</span><span class="kt">i128</span><span class="p">;</span>
+<span class="mi">1517252645</span><span class="k">i32</span><span class="p">;</span>
+<span class="mi">735464689</span><span class="k">u32</span><span class="p">;</span>
+<span class="mf">0.7460238032098697</span><span class="k">f64</span><span class="p">;</span>
+<span class="fm">format!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">var41</span><span class="p">).</span><span class="n">hash</span><span class="p">(</span><span class="n">hasher</span><span class="p">);</span>
+<span class="fm">format!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">var44</span><span class="p">).</span><span class="n">hash</span><span class="p">(</span><span class="n">hasher</span><span class="p">);</span>
+<span class="fm">vec!</span><span class="p">[</span><span class="mf">0.8649663464953213</span><span class="k">f64</span><span class="p">,</span><span class="mf">0.05053026936017313</span><span class="k">f64</span><span class="p">,</span><span class="mf">0.8529252322989213</span><span class="k">f64</span><span class="p">,</span><span class="mf">0.0075586315580329355</span><span class="k">f64</span><span class="p">];</span>
+<span class="p">();</span>
+<span class="o">........</span>
+</code></pre></div>
+</details>
+<p>This is your first randomly generated, valid, Rust program!</p>
+<p>This can then be compiled against rustc and run with the command line arguments:</p>
+<div class="highlight"><pre><span></span><code>rustc<span class="w"> </span><span class="m">1</span>.rs
+./1<span class="w"> </span><span class="m">0</span>.78968924<span class="w"> </span><span class="m">159490765721744842190015396263998969651</span><span class="w"> </span><span class="m">104585524602189803966499020697899014819</span><span class="w"> </span>RRDoKHc<span class="w"> </span><span class="m">4442417947899502423</span><span class="w"> </span><span class="m">8901</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span>-1624219412<span class="w"> </span><span class="m">89</span><span class="w"> </span><span class="m">0</span>.16808917087337594<span class="w"> </span>-4799608715056474785
+Program<span class="w"> </span>Seed:<span class="w"> </span><span class="m">8760012246522298462</span>
+<span class="m">7619823349681210740</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Usage:<span class="w"> </span>rustsmith<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+
+Options:
+<span class="w">  </span>-n,<span class="w"> </span>-count<span class="w"> </span>INT<span class="w">    </span>No.<span class="w"> </span>of<span class="w"> </span>files<span class="w"> </span>to<span class="w"> </span>generate
+<span class="w">  </span>-p,<span class="w"> </span>-print<span class="w">        </span>Print<span class="w"> </span>out<span class="w"> </span>program<span class="w"> </span>only
+<span class="w">  </span>-f,<span class="w"> </span>-fail-fast<span class="w">    </span>Use<span class="w"> </span>fail<span class="w"> </span>fast<span class="w"> </span>approach
+<span class="w">  </span>-s,<span class="w"> </span>-seed<span class="w"> </span>INT<span class="w">     </span>Optional<span class="w"> </span>Seed
+<span class="w">  </span>--directory<span class="w"> </span>TEXT<span class="w">  </span>Directory<span class="w"> </span>to<span class="w"> </span>save<span class="w"> </span>files
+<span class="w">  </span>-h,<span class="w"> </span>--help<span class="w">        </span>Show<span class="w"> </span>this<span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span><span class="nb">exit</span>
+</code></pre></div>
 
 
 
