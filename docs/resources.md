@@ -1,8 +1,9 @@
 # Resources
 
-RustSmith is a randomized program fuzzer for the Rust programming language that will generate valid programs that excercise multiple parts of the Rust programming language, in an attempt to uncover bugs in Rust compilers.
+Here are a bunch of resources that relate to the RustSmith project:
 
-Check out the documentation below to get started and learn about all its features!
-
-## Getting Started
-
+ - RustSmith Repository: :material-github: [rustsmith/rustsmith](https://github.
+   com/rustsmith/rustsmith)
+ - RustSmith Paper (accepted in ISSTA '23): :material-file-pdf-box: [RustSmith Paper](./rustsmith-paper.pdf)
+ - RustSmith Thesis: :material-file-pdf-box: [Masters Thesis](./rustsmith-thesis.pdf)
+ - Rust documentation: [https://doc.rust-lang.org/book](https://doc.rust-lang.org/book)

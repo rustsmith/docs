@@ -52,7 +52,9 @@ cd rustsmith
 This will create both the standalone executable under `./run/rustsmith` and the packaged JAR file
 under `./build/libs/RustSmith-1.0-SNAPSHOT-all.jar` which can then be executed as described above.
 
-## Basic Usage
+## Basic Usage of Rustsmith
+
+### Run command
 
 RustSmith is just a command line tool that can generate you valid Rust programs randomly.
 
@@ -62,6 +64,8 @@ The most basic usage of rustsmith would be the following command:
 ./rustsmith -n 1
 ```
 
+### Folder structure of output
+
 Which, when ran, should set up a folder structure wherever you ran the program in the following way:
 
 ```shell
@@ -70,6 +74,15 @@ Which, when ran, should set up a folder structure wherever you ran the program i
 |   |-- file0.rs
 |   |-- file0.txt
 ```
+
+Depending on the number of files you want to generate (specified by the `-n` flag) the number of programs will increase.
+
+Within each folder there are 2 main files: `fileX.rs` and `fileX.txt`.
+
+ - **`file0.rs`** is the valid and automatically generated rust file!
+ - **`file0.txt`** is the list of _command line arguments_ that should be passed into the executable
+
+### Example file output
 
 `file0.rs` will look something like the following:
  
@@ -143,14 +156,25 @@ Which, when ran, should set up a folder structure wherever you ran the program i
 
 This is your first randomly generated, valid, Rust program!
 
+### Testing the generated rust file
+
 This can then be compiled against rustc and run with the command line arguments:
 
 ```shell
-rustc 1.rs
-./1 0.78968924 159490765721744842190015396263998969651 104585524602189803966499020697899014819 RRDoKHc 4442417947899502423 8901 true -1624219412 89 0.16808917087337594 -4799608715056474785
+> rustc file0.rs
+
+> ./file0.rs 0.78968924 159490765721744842190015396263998969651 104585524602189803966499020697899014819 RRDoKHc 4442417947899502423 8901 true -1624219412 89 0.16808917087337594 -4799608715056474785 # input from 1.txt
+
 Program Seed: 8760012246522298462
 7619823349681210740
 ```
+
+The output produces the following 2 lines of output always:
+
+ - **Program Seed**: this is a seed used throughout the generation process for all random selections taken in the program. The idea is you can reproduce the same program through rustsmith by using the seed printed here (through the `-s <SEED>` option!)
+ - **Hashed output**: this number is the **hash** of all variables in scope by the end of the program _along with_ any other variables that were randomly chosen in the generation of the program to be added to the hasher. This is the main number to compare when running _differential testing_ across different optimization levels and compilers.
+
+## Usage options in RustSmith
 
 ```shell
 Usage: rustsmith [OPTIONS]
