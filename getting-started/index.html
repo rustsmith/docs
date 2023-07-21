@@ -305,8 +305,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-usage" class="md-nav__link">
-    Basic Usage
+  <a href="#basic-usage-of-rustsmith" class="md-nav__link">
+    Basic Usage of Rustsmith
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Usage of Rustsmith">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-command" class="md-nav__link">
+    Run command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#folder-structure-of-output" class="md-nav__link">
+    Folder structure of output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-file-output" class="md-nav__link">
+    Example file output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-the-generated-rust-file" class="md-nav__link">
+    Testing the generated rust file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-options-in-rustsmith" class="md-nav__link">
+    Usage options in RustSmith
   </a>
   
 </li>
@@ -432,8 +473,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-usage" class="md-nav__link">
-    Basic Usage
+  <a href="#basic-usage-of-rustsmith" class="md-nav__link">
+    Basic Usage of Rustsmith
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Usage of Rustsmith">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-command" class="md-nav__link">
+    Run command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#folder-structure-of-output" class="md-nav__link">
+    Folder structure of output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-file-output" class="md-nav__link">
+    Example file output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-the-generated-rust-file" class="md-nav__link">
+    Testing the generated rust file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-options-in-rustsmith" class="md-nav__link">
+    Usage options in RustSmith
   </a>
   
 </li>
@@ -485,17 +567,26 @@ installing OpenJDK 15 can be found on the <a href="https://openjdk.java.net">Ope
 </code></pre></div>
 <p>This will create both the standalone executable under <code>./run/rustsmith</code> and the packaged JAR file
 under <code>./build/libs/RustSmith-1.0-SNAPSHOT-all.jar</code> which can then be executed as described above.</p>
-<h2 id="basic-usage">Basic Usage</h2>
+<h2 id="basic-usage-of-rustsmith">Basic Usage of Rustsmith</h2>
+<h3 id="run-command">Run command</h3>
 <p>RustSmith is just a command line tool that can generate you valid Rust programs randomly.</p>
 <p>The most basic usage of rustsmith would be the following command:</p>
 <div class="highlight"><pre><span></span><code>./rustsmith<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span>
 </code></pre></div>
+<h3 id="folder-structure-of-output">Folder structure of output</h3>
 <p>Which, when ran, should set up a folder structure wherever you ran the program in the following way:</p>
 <div class="highlight"><pre><span></span><code>./outRust
 <span class="p">|</span>--<span class="w"> </span>file0
 <span class="p">|</span><span class="w">   </span><span class="p">|</span>--<span class="w"> </span>file0.rs
 <span class="p">|</span><span class="w">   </span><span class="p">|</span>--<span class="w"> </span>file0.txt
 </code></pre></div>
+<p>Depending on the number of files you want to generate (specified by the <code>-n</code> flag) the number of programs will increase.</p>
+<p>Within each folder there are 2 main files: <code>fileX.rs</code> and <code>fileX.txt</code>.</p>
+<ul>
+<li><strong><code>file0.rs</code></strong> is the valid and automatically generated rust file!</li>
+<li><strong><code>file0.txt</code></strong> is the list of <em>command line arguments</em> that should be passed into the executable</li>
+</ul>
+<h3 id="example-file-output">Example file output</h3>
 <p><code>file0.rs</code> will look something like the following:</p>
 <details class="note"><summary>Generated Rust Program snippet</summary><div class="highlight"><pre><span></span><code><span class="cp">#![allow(warnings, unused, unconditional_panic)]</span>
 <span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">env</span><span class="p">;</span>
@@ -563,12 +654,21 @@ under <code>./build/libs/RustSmith-1.0-SNAPSHOT-all.jar</code> which can then be
 </code></pre></div>
 </details>
 <p>This is your first randomly generated, valid, Rust program!</p>
+<h3 id="testing-the-generated-rust-file">Testing the generated rust file</h3>
 <p>This can then be compiled against rustc and run with the command line arguments:</p>
-<div class="highlight"><pre><span></span><code>rustc<span class="w"> </span><span class="m">1</span>.rs
-./1<span class="w"> </span><span class="m">0</span>.78968924<span class="w"> </span><span class="m">159490765721744842190015396263998969651</span><span class="w"> </span><span class="m">104585524602189803966499020697899014819</span><span class="w"> </span>RRDoKHc<span class="w"> </span><span class="m">4442417947899502423</span><span class="w"> </span><span class="m">8901</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span>-1624219412<span class="w"> </span><span class="m">89</span><span class="w"> </span><span class="m">0</span>.16808917087337594<span class="w"> </span>-4799608715056474785
+<div class="highlight"><pre><span></span><code>&gt;<span class="w"> </span>rustc<span class="w"> </span>file0.rs
+
+&gt;<span class="w"> </span>./file0.rs<span class="w"> </span><span class="m">0</span>.78968924<span class="w"> </span><span class="m">159490765721744842190015396263998969651</span><span class="w"> </span><span class="m">104585524602189803966499020697899014819</span><span class="w"> </span>RRDoKHc<span class="w"> </span><span class="m">4442417947899502423</span><span class="w"> </span><span class="m">8901</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span>-1624219412<span class="w"> </span><span class="m">89</span><span class="w"> </span><span class="m">0</span>.16808917087337594<span class="w"> </span>-4799608715056474785<span class="w"> </span><span class="c1"># input from 1.txt</span>
+
 Program<span class="w"> </span>Seed:<span class="w"> </span><span class="m">8760012246522298462</span>
 <span class="m">7619823349681210740</span>
 </code></pre></div>
+<p>The output produces the following 2 lines of output always:</p>
+<ul>
+<li><strong>Program Seed</strong>: this is a seed used throughout the generation process for all random selections taken in the program. The idea is you can reproduce the same program through rustsmith by using the seed printed here (through the <code>-s &lt;SEED&gt;</code> option!)</li>
+<li><strong>Hashed output</strong>: this number is the <strong>hash</strong> of all variables in scope by the end of the program <em>along with</em> any other variables that were randomly chosen in the generation of the program to be added to the hasher. This is the main number to compare when running <em>differential testing</em> across different optimization levels and compilers.</li>
+</ul>
+<h2 id="usage-options-in-rustsmith">Usage options in RustSmith</h2>
 <div class="highlight"><pre><span></span><code>Usage:<span class="w"> </span>rustsmith<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 
 Options:
